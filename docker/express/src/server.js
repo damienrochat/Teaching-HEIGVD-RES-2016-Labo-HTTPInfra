@@ -1,22 +1,17 @@
 
 var express = require('express');
-var moment = require('moment');
 var http = require('http');
-var Faker = require('Faker');
+var faker = require('Faker');
 
 var app = express();
 
-app.get('/:number', function(req, res) {
+app.get('/person.json', function(req, res) {
 
     var response = {
-        'version': 1.0,
-        'date': moment(Date.now()).format("YYYY-MM-DDThh:mm:ss.SSS"),
-        'emails': []
+        'image': faker.Image.cats(),
+        'name': faker.Name.findName(),
+        'description': faker.Lorem.paragraph()
     };
-
-    for (var i = 0; i < req.params.number; ++i) {
-        response.emails.push(Faker.Internet.email());
-    }
 
     console.log('Sending', response);
     res.json(response);

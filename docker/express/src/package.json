@@ -1,8 +1,7 @@
 {
   "main": "server.js",
   "dependencies": {
-    "Faker": "^0.7.2",
     "express": "^4.13.4",
-    "moment": "^2.13.0"
+    "Faker": "^0.7.2"
   }
 }
