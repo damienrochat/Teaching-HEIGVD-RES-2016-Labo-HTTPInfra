@@ -1348,6 +1348,16 @@ var speed = 'slow';
 $('html, body').hide();
 
 $(document).ready(function() {
+
+/* MENU SIDE OPEN */
+
+var MENUSIDEOPEN = document.getElementById('stripes');
+
+MENUSIDEOPEN.addEventListener('click', function() {
+               $("#main-container-menu").stop().animate({left:'0'},300);    
+}); 
+
+    
     $('html, body').fadeIn(speed, function() {
         $('a[href], button[href]').click(function(event) {
             var url = $(this).attr('href');
@@ -1407,14 +1417,6 @@ $(document).on('touchend mouseout', '#stripes', function(event){
             return false;
         }
 });
-
-/* MENU SIDE OPEN */
-
-var MENUSIDEOPEN = document.getElementById('stripes');
-
-MENUSIDEOPEN.addEventListener('click', function() {
-               $("#main-container-menu").stop().animate({left:'0'},300);    
-}); 
 
 /* BOUTON CROSS */
 
@@ -1682,13 +1684,12 @@ addLoadEvent(preloader);
 
 function loadPerson() {
     $.get("/api/person.json", function(data) {
-        console.log(data.addresses);
         var $person = '<figure class="white"> \
                             <a href="details.html"> \
                                 <img src="' + data.image + '" alt="" /> \
                                 <dl> \
                                     <dt>' + data.name + '</dt> \
-                                    <dd>' + data.text + '</dd> \
+                                    <dd>' + data.description + '</dd> \
                                 </dl> \
                             </a> \
                             <div id="wrapper-part-info"> \
