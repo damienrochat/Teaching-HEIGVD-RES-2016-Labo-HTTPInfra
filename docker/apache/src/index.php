@@ -1348,15 +1348,6 @@ var speed = 'slow';
 $('html, body').hide();
 
 $(document).ready(function() {
-
-/* MENU SIDE OPEN */
-
-var MENUSIDEOPEN = document.getElementById('stripes');
-
-MENUSIDEOPEN.addEventListener('click', function() {
-               $("#main-container-menu").stop().animate({left:'0'},300);    
-}); 
-
     
     $('html, body').fadeIn(speed, function() {
         $('a[href], button[href]').click(function(event) {
@@ -1447,14 +1438,6 @@ $(document).on('touchend mouseout', '#cross-menu', function(event){
             return false;
         }
 });
-
-/* MENU SIDE CLOSE */
-
-var MENUSIDECLOSE = document.getElementById('cross-menu');
-
-MENUSIDECLOSE.addEventListener('click', function() {
-               $("#main-container-menu").stop().animate({'left':'-100%'},300);  
-}); 
 
 /* BOUTON MENU ARROW-2 */
 
@@ -1605,6 +1588,22 @@ $(document).on('touchend mouseout', '#oldnew-prev', function(event){
             return false;
         }
 });
+
+/* MENU SIDE OPEN */
+
+/*var MENUSIDEOPEN = document.getElementById('stripes');
+
+MENUSIDEOPEN.addEventListener('click', function() {
+               $("#main-container-menu").stop().animate({left:'0'},300);    
+});*/
+
+/* MENU SIDE CLOSE */
+
+/*var MENUSIDECLOSE = document.getElementById('cross-menu');
+
+MENUSIDECLOSE.addEventListener('click', function() {
+               $("#main-container-menu").stop().animate({'left':'-100%'},300);  
+});*/
 
 
 /*FORMULAIRE NEWSLETTER*/

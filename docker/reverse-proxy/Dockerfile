@@ -1,7 +1,7 @@
 FROM php:7.0.6-apache
 MAINTAINER Damien Rochat <damien.rochat@heig-v.ch>
 
-COPY conf/ /etc/apache2/
+COPY conf/apache2/ /etc/apache2/
 
 COPY scripts/setup.sh /usr/local/sbin/setup.sh
 
